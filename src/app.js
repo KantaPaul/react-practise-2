@@ -103,11 +103,9 @@ class Form extends React.Component {
     let value = e.target.elements.option.value.trim();
     let error = this.props.addOption(value);
 
-    this.setState(() => {
-      return {
-        error: error
-      }
-    })
+    this.setState(() => ({
+      error: error
+    }))
   }
   render () {
     return (
@@ -134,27 +132,31 @@ class Counter extends React.Component {
   }
   hadnleAdd() {
     console.log('hadnleAdd');
-    this.setState((e) => {
-      return {
-        count: e.count + 1
-      };
-    })
+    // this.setState((e) => {
+    //   return {
+    //     count: e.count + 1
+    //   };
+    // })
+    this.setState((e) => ({count: e.count + 1}))
   }
   handleMinus() {
     console.log('handleMinus');
-    this.setState((e) => {
-      return {
-        count: e.count - 1
-      }
-    })
+    // this.setState((e) => {
+    //   return {
+    //     count: e.count - 1
+    //   }
+    // })
+    this.setState((e) => ({count: e.count - 1}))
   }
   handleReset() {
     console.log('handleReset');
-    this.setState(() => {
-      return {
-        count: 0
-      };
-    })
+    // this.setState(() => {
+    //   return {
+    //     count: 0
+    //   };
+    // })
+    // set state new formating
+    this.setState(() => ({count: 0}));
   }
   render() {
     return (
@@ -180,11 +182,8 @@ class Visibilty extends React.Component {
   }
   visibiltyToggle() {
     // alert('working');
-    this.setState((e) => {
-      return {
-        visibilty: !e.visibilty
-      };
-    })
+    // set state new fomarting
+    this.setState((e) => ({visibilty: !e.visibilty}));
   }
   render() {
     return (
@@ -240,6 +239,7 @@ class FirstApp extends React.Component {
     //     options: e.options.concat([option])
     //   };
     // })
+    // set state type new formating
     this.setState((e) => ({options: e.options.concat([option])}));
   }
   render () {

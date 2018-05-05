@@ -240,30 +240,40 @@ var Counter = function (_React$Component6) {
     key: 'hadnleAdd',
     value: function hadnleAdd() {
       console.log('hadnleAdd');
+      // this.setState((e) => {
+      //   return {
+      //     count: e.count + 1
+      //   };
+      // })
       this.setState(function (e) {
-        return {
-          count: e.count + 1
-        };
+        return { count: e.count + 1 };
       });
     }
   }, {
     key: 'handleMinus',
     value: function handleMinus() {
       console.log('handleMinus');
+      // this.setState((e) => {
+      //   return {
+      //     count: e.count - 1
+      //   }
+      // })
       this.setState(function (e) {
-        return {
-          count: e.count - 1
-        };
+        return { count: e.count - 1 };
       });
     }
   }, {
     key: 'handleReset',
     value: function handleReset() {
       console.log('handleReset');
+      // this.setState(() => {
+      //   return {
+      //     count: 0
+      //   };
+      // })
+      // set state new formating
       this.setState(function () {
-        return {
-          count: 0
-        };
+        return { count: 0 };
       });
     }
   }, {
@@ -325,10 +335,9 @@ var Visibilty = function (_React$Component7) {
     key: 'visibiltyToggle',
     value: function visibiltyToggle() {
       // alert('working');
+      // set state new fomarting
       this.setState(function (e) {
-        return {
-          visibilty: !e.visibilty
-        };
+        return { visibilty: !e.visibilty };
       });
     }
   }, {
@@ -416,6 +425,7 @@ var FirstApp = function (_React$Component8) {
       //     options: e.options.concat([option])
       //   };
       // })
+      // set state type new formating
       this.setState(function (e) {
         return { options: e.options.concat([option]) };
       });
