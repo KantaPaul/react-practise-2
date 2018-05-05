@@ -235,11 +235,12 @@ class FirstApp extends React.Component {
     } else if(this.state.options.indexOf(option) > -1) {
       return 'This value already exists'
     }
-    this.setState ((e) => {
-      return {
-        options: e.options.concat([option])
-      };
-    })
+    // this.setState ((e) => {
+    //   return {
+    //     options: e.options.concat([option])
+    //   };
+    // })
+    this.setState((e) => ({options: e.options.concat([option])}));
   }
   render () {
     let title = "My First React App",

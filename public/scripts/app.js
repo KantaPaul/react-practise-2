@@ -411,10 +411,13 @@ var FirstApp = function (_React$Component8) {
       } else if (this.state.options.indexOf(option) > -1) {
         return 'This value already exists';
       }
+      // this.setState ((e) => {
+      //   return {
+      //     options: e.options.concat([option])
+      //   };
+      // })
       this.setState(function (e) {
-        return {
-          options: e.options.concat([option])
-        };
+        return { options: e.options.concat([option]) };
       });
     }
   }, {
