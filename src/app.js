@@ -158,6 +158,26 @@ class Counter extends React.Component {
     // set state new formating
     this.setState(() => ({count: 0}));
   }
+  componentDidMount() {
+    try {
+      let json = localStorage.getItem('count');
+      let count = parseInt(json, 0);
+      if (!isNaN(count)) {
+        this.setState(() => {
+          return {
+            count: count
+          }
+        })
+      }
+    } catch (e) {
+      
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.count !== this.state.count) {
+      localStorage.setItem('count', this.state.count);
+    }
+  }
   render() {
     return (
       <div className="counter-wraper my-3">

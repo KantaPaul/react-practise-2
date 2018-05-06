@@ -277,6 +277,28 @@ var Counter = function (_React$Component6) {
       });
     }
   }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      try {
+        var json = localStorage.getItem('count');
+        var count = parseInt(json, 0);
+        if (!isNaN(count)) {
+          this.setState(function () {
+            return {
+              count: count
+            };
+          });
+        }
+      } catch (e) {}
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.count !== this.state.count) {
+        localStorage.setItem('count', this.state.count);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
